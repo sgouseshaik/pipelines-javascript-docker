@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sgouseshaikpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sgouseshaikpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sgouseshaikpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sgouseshaikpipelinesjavascriptdocker 
+          image: gouse.azurecr.io/sgouseshaikpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
